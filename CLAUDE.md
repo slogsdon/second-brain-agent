@@ -19,7 +19,10 @@ Every working session follows the same shape:
    to close out. Never end a working session without reflecting.
 
 If the user starts a session without a goal, check the latest daily note
-for open items and propose picking one up.
+for open items and propose picking one up. If `vault/Inbox/` has anything in
+it, offer the `inbox-triage` skill first — it sorts the raw thoughts captured
+since last session (from your phone, out of any session) and routes each with
+your confirmation. Often the picked-up goal comes straight out of the inbox.
 
 For multi-step goals, use the `loop` skill: you orchestrate and verify,
 subagents do the work — one iteration each, fresh context every time.
@@ -28,6 +31,8 @@ Small single-step goals don't need it; just work them directly.
 ## Memory map
 
 - `vault/MEMORY.md` — the index. Always loaded, kept under ~40 lines.
+- `vault/Inbox/` — raw capture surface: unstructured thoughts dropped from
+  Obsidian mobile, cleared by the `inbox-triage` skill.
 - `vault/Daily/` — episodic: one note per day, append-only session log.
 - `vault/Knowledge/` — semantic: one topic per note, edited in place.
 - `vault/Reflections/` — improvement signals: proposals live here until

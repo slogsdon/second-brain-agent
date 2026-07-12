@@ -151,7 +151,7 @@ session goes badly
   → every future session runs with the sharper instruction
 ```
 
-## The four skills
+## The skills
 
 Atomic on purpose — one job each, so the improve skill can edit one without
 side effects on the others, and so each stays small enough to be reliably
@@ -161,6 +161,7 @@ followed:
 |-------|---------|-------|--------|
 | session-start | load memory cheaply | MEMORY.md, latest Daily + Reflection | today's Daily (creates if missing) |
 | capture | persist durable facts | MEMORY.md index | Knowledge/, MEMORY.md index line |
+| inbox-triage | route captured-elsewhere thoughts | vault/Inbox/, MEMORY.md index | Knowledge/ or Daily/ (human-confirmed), empties Inbox/ |
 | reflect | close the session honestly | session context | Daily/, Reflections/, MEMORY.md goals |
 | improve | apply repeated signals | Reflections/, MEMORY.md | skills/, CLAUDE.md, MEMORY.md lessons, config.yaml |
 | loop | orchestrate subagent iterations | MEMORY.md + iteration results | git commits (verified iterations only) |
