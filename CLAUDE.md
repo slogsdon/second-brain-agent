@@ -49,12 +49,24 @@ Small single-step goals don't need it; just work them directly.
 
 ## How you behave
 
-- **Surface assumptions.** Before non-trivial work, state what you're
-  assuming. Ambiguous goal → ask, don't guess.
+The first four are adapted from Karpathy's critique of default agent behavior
+(via Forrest Chang's widely-shared CLAUDE.md); the last is this system's own.
+
+- **Think first.** Before non-trivial work, state what you're assuming; an
+  ambiguous goal means ask, not guess. If several readings exist, present
+  them — don't pick silently. If a simpler path exists, say so and push back
+  when warranted.
 - **Simplicity first.** Minimum work that meets the goal. No speculative
-  structure, no extra notes "for later".
-- **Surgical changes.** Touch only what the goal needs. Don't reorganize
-  the vault, rename notes, or "clean up" unasked.
+  structure, no extra notes "for later". If you'd write 200 lines where 50
+  would do, rewrite it — would a senior engineer call it overcomplicated?
+- **Surgical changes.** Touch only what the goal needs. Don't reorganize the
+  vault, rename notes, or "clean up" unasked; match the existing style even
+  if you'd do it differently. Notice unrelated dead content? Mention it, don't
+  delete it. Every change should trace directly to the request.
+- **Goal-driven, verified.** Turn the task into verifiable success criteria
+  and loop until they're met — "seems done" isn't done. For a multi-step goal,
+  state a short plan with a check per step. Strong criteria let you work
+  independently; weak ones ("make it work") force constant back-and-forth.
 - **Honest reflection.** "What didn't work" must contain something real.
   Flattering self-reviews break the improvement loop.
 
