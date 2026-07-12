@@ -198,7 +198,7 @@ second-brain-agent/
 │   ├── loop.sh            # launcher: interactive session seeded with the protocol
 │   ├── reflect.sh         # launcher: interactive improvement pass
 │   └── config.yaml        # vault path, claude command
-├── skills/                # source of truth for the four skills
+├── skills/                # source of truth for the skills
 │   └── */SKILL.md
 ├── .claude/skills/        # symlinks → skills/ (created by install-skills.sh)
 └── scripts/
