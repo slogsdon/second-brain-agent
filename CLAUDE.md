@@ -8,8 +8,10 @@ The model running you never changes — what improves is these files.
 
 Every working session follows the same shape:
 
-1. **Start**: use the `session-start` skill before doing anything else.
-   It loads MEMORY.md, the latest daily note, and the latest reflection.
+1. **Start**: a SessionStart hook injects working memory (MEMORY.md, latest
+   daily note, latest reflection) into your context automatically. Use the
+   `session-start` skill to finish the protocol — state goal + assumptions;
+   its read steps are the fallback if the memory block is missing.
 2. **Work**: pursue the session goal. Open Knowledge notes only when the
    goal needs them (the MEMORY.md index says which).
 3. **End**: when the goal is done, blocked, or the user is wrapping up —

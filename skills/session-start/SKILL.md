@@ -7,6 +7,11 @@ description: Load working memory at the start of every agent session. Use FIRST 
 
 One job: load the right memory into context, cheaply. Nothing else.
 
+A SessionStart hook (`scripts/session-start-hook.sh`) normally injects
+memory automatically — look for a `=== WORKING MEMORY ===` block in your
+context. If it's there, skip straight to step 6. Steps 1-5 are the manual
+fallback (hook not installed, or running outside Claude Code).
+
 ## Steps
 
 1. Read `vault/MEMORY.md` in full. This is the index — who you work for,
@@ -35,6 +40,7 @@ One job: load the right memory into context, cheaply. Nothing else.
 ## Rules
 
 - This skill loads memory; it never writes Knowledge or Reflections.
+- Never re-read files the hook already injected — that's paying twice.
 - Total reading: MEMORY.md + 1 daily note + 1 reflection + at most 2-3
   Knowledge notes. If you're reading more than that, stop — you're burning
   context the session needs for actual work.

@@ -103,7 +103,8 @@ agent's brain grow.
 This opens a normal interactive Claude Code session — you can talk to it,
 steer it, interrupt it. What happens:
 
-1. Claude loads `vault/MEMORY.md` (nearly empty right now)
+1. A session-start hook injects `vault/MEMORY.md` (nearly empty right now)
+   plus the latest daily note and reflection — automatically, every session
 2. It asks you questions, and **captures** the answers into
    `vault/Knowledge/` notes
 3. When you wrap up, it **reflects**: logs the session to `vault/Daily/`,

@@ -77,6 +77,14 @@ tiers as plain markdown in an Obsidian vault:
 | Long-term episodic | experiences | `vault/Daily/` — one note per day, session log | reflect skill |
 | Long-term procedural | skills/habits | `skills/*/SKILL.md` + `agent/config.yaml` | improve skill (gated) |
 
+**Memory loading is infrastructure, not behavior**: a SessionStart hook
+(`.claude/settings.json` → `scripts/session-start-hook.sh`) injects
+MEMORY.md + the latest daily note + the latest reflection into every
+session's context before the model does anything. A skill the model must
+remember to invoke can be skipped; a hook cannot. The session-start skill
+remains for the protocol's judgment half (state goal + assumptions) and as
+manual fallback.
+
 Plus the piece that makes retrieval work:
 
 - **`vault/MEMORY.md`** — the index. One line per fact/goal/note. Loaded
@@ -111,8 +119,9 @@ Research discriminators between "self-improving" and "merely looping":
 1. **Reflection must be re-injected.** Reflexion's entire gain (91% vs 80%
    on HumanEval) comes from routing the post-mortem back into the next
    attempt. Reflection generated but never re-read is ceremony — the most
-   common failure in the wild. Here: session-start *always* reads the latest
-   reflection (step 3 of that skill).
+   common failure in the wild. Here: the SessionStart hook injects the
+   latest reflection into every session's context — re-injection is
+   guaranteed by infrastructure, not model discipline.
 
 2. **Write-back must be gated.** Voyager's ablation: remove self-verification
    and performance drops 73%. Unverified self-modification makes agents
