@@ -1,4 +1,4 @@
-# DESIGN.md — second-brain-agent
+# ARCHITECTURE.md — second-brain-agent
 
 Architecture decisions and the research behind them. If you just want to use
 the system, read README.md instead.
@@ -186,7 +186,7 @@ skills stay under ~80 lines (a rule added must displace a rule dropped).
 ```
 second-brain-agent/
 ├── README.md              # beginner-facing intro + quickstart
-├── DESIGN.md              # this file
+├── ARCHITECTURE.md        # this file
 ├── CLAUDE.md              # standing behavior: session protocol, memory map,
 │                          #   guardrails — loaded by every session in this dir
 ├── vault/                 # the Obsidian vault (open it in Obsidian directly)

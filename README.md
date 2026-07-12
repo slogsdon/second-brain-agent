@@ -221,7 +221,7 @@ and `git revert` undoes any bad edit.
 
 ## Going deeper
 
-- `DESIGN.md` — the architecture, the research behind each decision, and
+- `ARCHITECTURE.md` — the architecture, the research behind each decision, and
   what was deliberately left out
 - Lilian Weng's [LLM Powered Autonomous Agents](https://lilianweng.github.io/posts/2023-06-23-agent/)
   — the canonical writeup of agent planning, memory, and reflection
