@@ -74,7 +74,7 @@ tiers as plain markdown in an Obsidian vault:
 | Short-term | working memory | the session's context window | nobody — discarded each iteration |
 | Long-term semantic | facts/concepts | `vault/Knowledge/` — one topic per note | capture skill |
 | Long-term episodic | experiences | `vault/Daily/` — one note per day, session log | reflect skill |
-| Long-term procedural | skills/habits | `skills/*/SKILL.md` + `agent/config.yaml` | improve skill (gated) |
+| Long-term procedural | skills/habits | `skills/*/SKILL.md` + `config.yaml` | improve skill (gated) |
 
 **Memory loading is infrastructure, not behavior**: a SessionStart hook
 (`.claude/settings.json` → `scripts/session-start-hook.sh`) injects
@@ -188,13 +188,12 @@ second-brain-agent/
 ├── ARCHITECTURE.md        # this file
 ├── CLAUDE.md              # standing behavior: session protocol, memory map,
 │                          #   guardrails — loaded by every session in this dir
+├── config.yaml            # vault path (read by the SessionStart hook)
 ├── vault/                 # the Obsidian vault (open it in Obsidian directly)
 │   ├── Daily/             # episodic memory — append-only session log
 │   ├── Knowledge/         # semantic memory — one topic per note
 │   ├── Reflections/       # improvement signals — proposals live here
 │   └── MEMORY.md          # the always-loaded index
-├── agent/
-│   └── config.yaml        # vault path (read by the SessionStart hook)
 ├── skills/                # source of truth for the skills
 │   └── */SKILL.md
 ├── .claude/skills/        # symlinks → skills/ (created by install-skills.sh)

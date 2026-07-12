@@ -41,7 +41,7 @@ or is written as vague praise, breaks the whole loop.
    <a rule a future session could actually follow>
 
    ### Proposed change
-   - target: <skills/<name>/SKILL.md | CLAUDE.md | vault/MEMORY.md | agent/config.yaml | none>
+   - target: <skills/<name>/SKILL.md | CLAUDE.md | vault/MEMORY.md | config.yaml | none>
    - change: <one sentence describing the edit>
    - status: proposed
    ```

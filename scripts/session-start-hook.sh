@@ -8,7 +8,7 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 
 VAULT="vault"
-[ -f agent/config.yaml ] && VAULT="$(grep -E '^vault:' agent/config.yaml | sed 's/^vault:[[:space:]]*//')"
+[ -f config.yaml ] && VAULT="$(grep -E '^vault:' config.yaml | sed 's/^vault:[[:space:]]*//')"
 
 today=$(date +%Y-%m-%d)
 daily="$VAULT/Daily/$today.md"

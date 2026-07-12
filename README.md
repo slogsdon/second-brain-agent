@@ -202,7 +202,7 @@ sessions → better reflections → sharper instructions.
 
 ## Dials you can turn
 
-- `agent/config.yaml` → `vault` — point at a different vault (e.g. your
+- `config.yaml` → `vault` — point at a different vault (e.g. your
   real Obsidian vault) once you outgrow the starter one
 - `CLAUDE.md` — the agent's standing behavior rules; edit to taste (the
   improve skill will also propose edits here over time)

@@ -32,7 +32,7 @@ the model never changes, but the environment it runs in gets sharper.
    - `vault/MEMORY.md` → add a one-line entry under `## Standing lessons`
      (max 10; if full, demote the least-relevant lesson back to its
      Reflections note).
-   - `agent/config.yaml` → change the value, keep the comment accurate.
+   - `config.yaml` → change the value, keep the comment accurate.
 
 4. Mark each applied proposal `status: applied` in its Reflections note.
 
