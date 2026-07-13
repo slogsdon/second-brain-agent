@@ -74,7 +74,7 @@ tiers as plain markdown in an Obsidian vault:
 | Short-term | working memory | the session's context window | nobody — discarded each iteration |
 | Long-term semantic | facts/concepts | `vault/Knowledge/` — one topic per note | capture skill |
 | Long-term episodic | experiences | `vault/Daily/` — one note per day, session log | reflect skill |
-| Long-term procedural | skills/habits | `skills/*/SKILL.md` + `config.yaml` | improve skill (gated) |
+| Long-term procedural | skills/habits | `.claude/skills/*/SKILL.md` + `config.yaml` | improve skill (gated) |
 
 **Memory loading is infrastructure, not behavior**: a SessionStart hook
 (`.claude/settings.json` → `scripts/session-start-hook.sh`) injects
@@ -163,7 +163,7 @@ followed:
 | inbox-triage | route captured-elsewhere thoughts | vault/Inbox/, MEMORY.md index | Knowledge/ or Daily/ (human-confirmed), empties Inbox/ |
 | profile-interview | learn the user's voice + taste | user, one Q at a time | Profiles/voice-profile.md, Profiles/taste-profile.md |
 | reflect | close the session honestly | session context | Daily/, Reflections/, MEMORY.md goals |
-| improve | apply repeated signals | Reflections/, MEMORY.md | skills/, CLAUDE.md, MEMORY.md lessons, config.yaml |
+| improve | apply repeated signals | Reflections/, MEMORY.md | .claude/skills/, CLAUDE.md, MEMORY.md lessons, config.yaml |
 | loop | orchestrate subagent iterations | MEMORY.md + iteration results | git commits (verified iterations only) |
 
 **The loop skill** is the scaled-up loop: the interactive session becomes
@@ -189,6 +189,10 @@ second-brain-agent/
 ├── CLAUDE.md              # standing behavior: session protocol, memory map,
 │                          #   guardrails — loaded by every session in this dir
 ├── config.yaml            # vault path (read by the SessionStart hook)
+├── .claude/
+│   ├── settings.json      # registers the SessionStart hook
+│   └── skills/            # the skills, discovered automatically on folder-open
+│       └── */SKILL.md
 ├── vault/                 # the Obsidian vault (open it in Obsidian directly)
 │   ├── Inbox/             # raw phone captures, cleared by inbox-triage
 │   ├── Profiles/          # voice + taste, built by profile-interview
@@ -196,18 +200,16 @@ second-brain-agent/
 │   ├── Knowledge/         # semantic memory — one topic per note
 │   ├── Reflections/       # improvement signals — proposals live here
 │   └── MEMORY.md          # the always-loaded index
-├── skills/                # source of truth for the skills
-│   └── */SKILL.md
-├── .claude/skills/        # symlinks → skills/ (created by install-skills.sh)
 └── scripts/
-    ├── setup.sh                # prereq checks, git init, first daily note
-    ├── session-start-hook.sh   # injects working memory into every session
-    └── install-skills.sh       # symlink skills into .claude/skills/
+    ├── setup.sh                # optional: git init + prereq checks (terminal)
+    └── session-start-hook.sh   # injects working memory into every session
 ```
 
-Skills are symlinked (not copied) into `.claude/skills/` so that when improve
-edits `skills/reflect/SKILL.md`, the live skill changes immediately and the
-diff sits in one place.
+Skills live in `.claude/skills/` as real files — where Claude Code discovers them
+automatically the moment you open this folder. No symlink, no install step. When
+improve edits `.claude/skills/reflect/SKILL.md`, the live skill changes on the next
+session. This is also what lets the kit work from a downloaded ZIP: there's nothing
+to build or link, opening the folder is enough.
 
 ## What was deliberately left out
 

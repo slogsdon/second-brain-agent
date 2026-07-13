@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
-# One-time setup: checks prerequisites and initializes the vault.
+# OPTIONAL setup (terminal only): git-init the vault for version history + a
+# prereq check. The kit works without this — skills live in .claude/skills/ and
+# the SessionStart hook seeds today's note, so opening the folder in Claude Code
+# is enough. Run this only if you want git history of your memory.
 set -euo pipefail
 
 cd "$(dirname "$0")/.."
@@ -46,11 +49,9 @@ else
   echo "ok: $daily already exists"
 fi
 
-# 5. Install skills into Claude Code
-./scripts/install-skills.sh
-
 echo ""
 echo "Setup complete. Open Claude Code in this folder and give it a goal:"
 echo "  claude"
 echo "  (or open this folder in the Claude Code desktop app / your IDE)"
-echo "The SessionStart hook loads memory and CLAUDE.md runs the protocol."
+echo "Skills are in .claude/skills/ (already discovered); the SessionStart hook"
+echo "loads memory and CLAUDE.md runs the protocol."

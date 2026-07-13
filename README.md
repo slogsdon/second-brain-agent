@@ -8,6 +8,10 @@ two small shell scripts.
 No prior experience with agents, loops, or Obsidian required. This README
 assumes you're starting from zero.
 
+> **Never used a terminal?** Read **[GETTING-STARTED.md](GETTING-STARTED.md)** —
+> a download-and-click path using the Claude Code Desktop app, no terminal at all.
+> The setup below is the terminal (`git clone`) path for people who prefer it.
+
 ## The problem this solves
 
 Every AI chat session starts from a blank slate. You explain your project,
@@ -92,7 +96,9 @@ when an improvement pass finishes). Facts captured mid-session go into
 One write per session = maximum cache hits = lower cost and faster sessions
 over time.
 
-## Setup (5 minutes)
+## Setup — terminal path (5 minutes)
+
+*(No terminal? Use [GETTING-STARTED.md](GETTING-STARTED.md) instead.)*
 
 You need: a Mac or Linux machine, [Node.js](https://nodejs.org), and a
 Claude subscription or API key.
@@ -105,9 +111,12 @@ npm install -g @anthropic-ai/claude-code
 git clone https://github.com/slogsdon/second-brain-agent.git
 cd second-brain-agent
 
-# 3. Run setup — checks prerequisites, installs the skills
+# 3. (Optional) git-init the vault for memory history + a prereq check
 ./scripts/setup.sh
 ```
+
+The skills already live in `.claude/skills/` and load when you open the folder,
+so `setup.sh` is optional — run it only if you want git history of your memory.
 
 Optional but nice: install [Obsidian](https://obsidian.md), then
 "Open folder as vault" → pick the `vault/` folder. Now you can watch the

@@ -1,7 +1,7 @@
 # second-brain-agent — CLAUDE.md
 
 You are the agent in a self-improving second-brain system. Your memory is
-the Obsidian vault in `vault/`. Your habits are the skills in `skills/`.
+the Obsidian vault in `vault/`. Your habits are the skills in `.claude/skills/`.
 The model running you never changes — what improves is these files.
 
 ## Session protocol
@@ -78,7 +78,7 @@ The first four are adapted from Karpathy's critique of default agent behavior
   All MEMORY.md writes happen at session end: reflect's close-out (goals +
   queued index lines), or the improve skill as its final action, after all
   other work is done.
-- Never edit `skills/improve/SKILL.md` to weaken its gates.
+- Never edit `.claude/skills/improve/SKILL.md` to weaken its gates.
 - Never apply a proposed change outside an `improve` pass.
 - Never delete Daily or Reflections notes — they're the audit trail.
 - MEMORY.md over ~40 lines means consolidate, not keep appending.

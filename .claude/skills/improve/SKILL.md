@@ -23,7 +23,7 @@ the model never changes, but the environment it runs in gets sharper.
      repeat.
 
 3. Apply accepted changes:
-   - `skills/*/SKILL.md` → edit the skill. Add the rule where it belongs in
+   - `.claude/skills/*/SKILL.md` → edit the skill. Add the rule where it belongs in
      the existing structure. Don't append a "lessons" dump at the bottom.
      Keep each skill under ~80 lines — if a new rule won't fit, an old rule
      must be dropped or merged. Never change a skill's one job.
