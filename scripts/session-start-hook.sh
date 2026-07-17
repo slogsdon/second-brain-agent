@@ -7,8 +7,15 @@ set -euo pipefail
 
 cd "$(dirname "$0")/.."
 
+# Resolve the vault: recorded path (set by scripts/setup.sh, works for plugin
+# installs where cwd is not the repo) > repo config.yaml > ./vault.
 VAULT="vault"
-[ -f config.yaml ] && VAULT="$(grep -E '^vault:' config.yaml | sed 's/^vault:[[:space:]]*//')"
+recorded="$HOME/.config/loop-and-gate/vault"
+if [ -f "$recorded" ]; then
+  VAULT="$(cat "$recorded")"
+elif [ -f config.yaml ]; then
+  VAULT="$(grep -E '^vault:' config.yaml | sed 's/^vault:[[:space:]]*//')"
+fi
 
 today=$(date +%Y-%m-%d)
 daily="$VAULT/Daily/$today.md"

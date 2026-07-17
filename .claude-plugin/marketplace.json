@@ -1,0 +1,13 @@
+{
+  "name": "second-brain-agent",
+  "owner": { "name": "Shane Logsdon", "email": "shane@shanelogsdon.com" },
+  "metadata": { "description": "The Loop & Gate Foundation — a self-improving agent loop with a plain-text, git-tracked memory." },
+  "plugins": [
+    {
+      "name": "second-brain-agent",
+      "source": "./",
+      "description": "Capture, reflect, improve, and a SessionStart hook that injects working memory. Plain markdown in Obsidian — no vector DB, no cloud.",
+      "category": "productivity"
+    }
+  ]
+}
