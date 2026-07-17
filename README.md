@@ -111,18 +111,39 @@ npm install -g @anthropic-ai/claude-code
 git clone https://github.com/slogsdon/second-brain-agent.git
 cd second-brain-agent
 
-# 3. (Optional) git-init the vault for memory history + a prereq check
+# 3. Pick where your vault lives (iCloud on Mac = free mobile sync) + scaffold it
 ./scripts/setup.sh
 ```
 
-The skills already live in `.claude/skills/` and load when you open the folder,
-so `setup.sh` isn't required. **Power move:** run it to put your memory under
-`git` — every change the agent makes to what it knows becomes tracked and
-reversible, a full history of how your second brain grew.
+`setup.sh` chooses a home for your vault, scaffolds it, and records the path so
+the memory hook can find it. On macOS it defaults to your Obsidian iCloud
+folder, so the same vault syncs to Obsidian on iPhone and iPad for free — capture
+to `Inbox/` from your phone and the agent triages it next session. Pass a path
+(`./scripts/setup.sh ~/my-vault`) to put it elsewhere.
+
+**Power move:** git-init the vault (setup prints the command) so every change the
+agent makes to what it knows becomes tracked and reversible.
 
 Optional but nice: install [Obsidian](https://obsidian.md), then
-"Open folder as vault" → pick the `vault/` folder. Now you can watch the
+"Open folder as vault" → pick your vault folder. Now you can watch the
 agent's brain grow.
+
+### Or install as a plugin (no clone)
+
+```
+/plugin marketplace add slogsdon/second-brain-agent
+```
+
+Enable it, run `scripts/setup.sh` once to place your vault, then start any
+session — the SessionStart hook and all seven skills load globally.
+
+**One limitation, by platform.** The `improve` skill rewrites its own skills as
+it learns. That self-editing only persists in a **clone**, where the skills are
+your working copy. Installed as a **plugin**, skills live in a read-only cache,
+so `improve` still evolves your memory (`MEMORY.md`, reflections) but not the
+skill files themselves. Windows plugin users may also need developer mode for
+the compatibility symlink. Clone for the full self-improving loop; install the
+plugin if you just want to run it everywhere.
 
 ## Your first session
 
