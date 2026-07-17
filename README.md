@@ -271,6 +271,8 @@ and `git revert` undoes any bad edit.
 
 ## Going deeper
 
+- [Loop & Gate](https://shane.logsdon.io/loop-and-gate/) — the whole stack this is the
+  Foundation of: the mental model, all four pieces, and how to install them together
 - `ARCHITECTURE.md` — the architecture, the research behind each decision, and
   what was deliberately left out
 - Lilian Weng's [LLM Powered Autonomous Agents](https://lilianweng.github.io/posts/2023-06-23-agent/)
