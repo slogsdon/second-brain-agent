@@ -150,6 +150,52 @@ session goes badly
   → every future session runs with the sharper instruction
 ```
 
+## Containing bad assumptions before the memory matures
+
+The gates above protect a *mature* memory. The harder question a reviewer asked:
+what stops a wrong assumption made in the first few sessions — when MEMORY.md is
+nearly empty — from compounding into a standing lesson? Four things do, and two
+honest gaps remain.
+
+What contains it:
+
+1. **Propose and apply are separate skills.** Reflect only writes
+   `status: proposed` into Reflections/. That directory is a quarantine: a
+   proposal influences nothing until an improve pass promotes it. A bad early
+   idea sits inert, out of the injected context.
+2. **The two-strike gate needs a repeat.** A single occurrence is rejected or
+   held, never applied. An early coincidence has to recur before it can become a
+   rule, and most don't.
+3. **Verification outranks self-report.** In a loop, the orchestrator checks
+   each iteration against a pass/fail stated up front; a fail runs
+   `git checkout -- vault/`, discarding that iteration's memory writes before
+   they are ever committed. Bad work does not reach memory to compound from.
+4. **Every write is a reviewed, reversible commit.** You see each improve diff,
+   and any bad entry that slips through is one `git revert` away.
+
+The honest gaps:
+
+- **The second strike is not independent.** Reflect reads the previous
+  reflection, so once a wrong lesson is written down, the next session can see it
+  and rationalize a confirming second occurrence. Correlated evidence can satisfy
+  a gate meant for independent evidence. (Loop's fresh-context subagents don't
+  carry this; reflect itself does.)
+- **A young memory has leverage.** When MEMORY.md holds three lines, one wrong
+  line is a third of the standing context. There is no confidence weight — every
+  standing lesson is treated as equally true.
+
+So the real safeguard during immaturity is not the memory, it's you. The human
+gate is heaviest exactly when the corpus is youngest and the automated gates have
+the least to work with: the CLAUDE.md behavior rules force the agent to state its
+assumptions before acting, improve passes are interactive, and nothing is applied
+without a diff you approve. The memory-side gates take over as the corpus fills
+and repeats become real signal rather than small-sample noise.
+
+Hardening on the roadmap (not yet implemented): generate the second strike from a
+fresh context blind to the first, so confirmation is independent; tag entries with
+an evidence count and weight injection by it; expire held proposals that never
+repeat.
+
 ## The skills
 
 Atomic on purpose — one job each, so the improve skill can edit one without
