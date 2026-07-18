@@ -9,7 +9,7 @@ No prior experience with agents, loops, or Obsidian required. This README
 assumes you're starting from zero.
 
 > **Never used a terminal?** Read **[GETTING-STARTED.md](GETTING-STARTED.md)** —
-> a download-and-click path using the Claude Code Desktop app, no terminal at all.
+> a download-and-click path using the Claude desktop app, no terminal at all.
 > The setup below is the terminal (`git clone`) path for people who prefer it.
 
 ## The problem this solves
@@ -155,7 +155,7 @@ claude
 # "Get to know me: ask about my current project and preferences, then save what you learn"
 ```
 
-(Or open the folder in the Claude Code desktop app or your IDE — same result;
+(Or open the folder in the Claude desktop app or your IDE — same result;
 the hook and `CLAUDE.md` do the priming.) It's a normal interactive session —
 you can talk to it, steer it, interrupt it. What happens:
 
@@ -226,7 +226,7 @@ default; turn it on once so it's the default for every session:
 claude --remote-control        # just this session
 # make it permanent in settings.json:
 #   "remoteControlAtStartup": true
-# or in the Claude Code desktop app:
+# or in the Claude desktop app:
 #   Settings → Claude Code → enable remote control by default
 ```
 
