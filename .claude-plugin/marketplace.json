@@ -1,12 +1,30 @@
 {
-  "name": "loop-and-gate-foundation",
+  "name": "loop-and-gate",
   "owner": { "name": "Shane Logsdon", "email": "shane@shanelogsdon.com" },
-  "metadata": { "description": "The Loop & Gate Foundation — a self-improving agent loop with a plain-text, git-tracked memory." },
+  "metadata": { "description": "The Loop & Gate stack: a self-improving agent Foundation with plain-text memory, plus Build, Grow, and Accountability kits. One marketplace, four plugins." },
   "plugins": [
     {
       "name": "loop-and-gate-foundation",
       "source": "./",
-      "description": "Capture, reflect, improve, and a SessionStart hook that injects working memory. Plain markdown in Obsidian — no vector DB, no cloud.",
+      "description": "Files-only agent memory in an Obsidian vault. Capture, reflect, and improve skills, plus a SessionStart hook that injects working memory each session. No vector database, no cloud.",
+      "category": "productivity"
+    },
+    {
+      "name": "loop-and-gate-build-kit",
+      "source": { "source": "github", "repo": "slogsdon/loop-and-gate-build-kit" },
+      "description": "A judgment layer for building software with an agentic loop. Eleven human-decision gates plus the loop-and-gate operating skill.",
+      "category": "productivity"
+    },
+    {
+      "name": "loop-and-gate-grow-kit",
+      "source": { "source": "github", "repo": "slogsdon/loop-and-gate-grow-kit" },
+      "description": "A judgment layer for taking software to market with an agentic loop. Cadence-grouped grow gates plus the grow-and-gate operating skill.",
+      "category": "productivity"
+    },
+    {
+      "name": "loop-and-gate-accountability-kit",
+      "source": { "source": "github", "repo": "slogsdon/loop-and-gate-accountability-kit" },
+      "description": "A judgment layer for your own follow-through. Eight gates and five ritual commands, with a deferral engine that flags the task you keep avoiding.",
       "category": "productivity"
     }
   ]
