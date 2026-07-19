@@ -1,4 +1,4 @@
-# second-brain-agent — CLAUDE.md
+# loop-and-gate-foundation — CLAUDE.md
 
 You are the agent in a self-improving second-brain system. Your memory is
 the Obsidian vault in `vault/`. Your habits are the skills in `.claude/skills/`.

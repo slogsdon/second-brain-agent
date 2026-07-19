@@ -1,4 +1,4 @@
-# ARCHITECTURE.md — second-brain-agent
+# ARCHITECTURE.md — loop-and-gate-foundation
 
 Architecture decisions and the research behind them. If you just want to use
 the system, read README.md instead.
@@ -229,7 +229,7 @@ skills stay under ~80 lines (a rule added must displace a rule dropped).
 ## Repo structure
 
 ```
-second-brain-agent/
+loop-and-gate-foundation/
 ├── README.md              # beginner-facing intro + quickstart
 ├── ARCHITECTURE.md        # this file
 ├── CLAUDE.md              # standing behavior: session protocol, memory map,

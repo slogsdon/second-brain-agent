@@ -1,4 +1,4 @@
-# second-brain-agent settings
+# loop-and-gate-foundation settings
 # Read by the SessionStart hook (scripts/session-start-hook.sh) with grep —
 # no YAML library needed.
 

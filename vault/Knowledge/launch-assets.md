@@ -46,7 +46,7 @@ taste in 15." Honest two-part time budget.
    gate firing.
 
 Part 1 — first gate in 5 min:
-2. **Install Foundation** — `/plugin marketplace add slogsdon/second-brain-agent`
+2. **Install Foundation** — `/plugin marketplace add slogsdon/loop-and-gate-foundation`
    → Install; then `> Run the Foundation setup script to place my vault.` (the
    memory + session loop everything rides on).
 3. **Add Build kit** — `/plugin marketplace add slogsdon/loop-and-gate-build-kit`

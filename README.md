@@ -1,4 +1,4 @@
-# second-brain-agent
+# loop-and-gate-foundation
 
 An AI agent that **remembers** — and gets better at working with you over
 time. Built on [Claude Code](https://claude.com/claude-code) and
@@ -108,8 +108,8 @@ Claude subscription or API key.
 npm install -g @anthropic-ai/claude-code
 
 # 2. Clone this repo
-git clone https://github.com/slogsdon/second-brain-agent.git
-cd second-brain-agent
+git clone https://github.com/slogsdon/loop-and-gate-foundation.git
+cd loop-and-gate-foundation
 
 # 3. Pick where your vault lives (iCloud on Mac = free mobile sync) + scaffold it
 ./scripts/setup.sh
@@ -131,7 +131,7 @@ agent's brain grow.
 ### Or install as a plugin (no clone)
 
 ```
-/plugin marketplace add slogsdon/second-brain-agent
+/plugin marketplace add slogsdon/loop-and-gate-foundation
 ```
 
 Enable it, run `scripts/setup.sh` once to place your vault, then start any

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# One-time setup for second-brain-agent (Loop & Gate Foundation).
+# One-time setup for loop-and-gate-foundation (Loop & Gate Foundation).
 # Picks a home for your vault, scaffolds it, and records the path so the
 # SessionStart hook knows where your memory lives — in both clone and
 # plugin installs. Safe to re-run: never overwrites files you've started.
@@ -8,7 +8,7 @@ set -euo pipefail
 CONFIG_DIR="$HOME/.config/loop-and-gate"
 CONFIG_FILE="$CONFIG_DIR/vault"
 
-echo "== second-brain-agent — setup =="
+echo "== loop-and-gate-foundation — setup =="
 
 # 1. Choose a vault home. Priority: arg > env > iCloud (macOS) > ~/second-brain.
 icloud="$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents"

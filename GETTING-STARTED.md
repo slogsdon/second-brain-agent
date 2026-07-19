@@ -38,10 +38,10 @@ The Foundation installs the same way as the kits — one command in the chat, no
 download. In the Code chat box, type this and press Enter:
 
 ```
-/plugin marketplace add slogsdon/second-brain-agent
+/plugin marketplace add slogsdon/loop-and-gate-foundation
 ```
 
-A menu appears. Click **Install** on the *second-brain-agent* plugin. That's it —
+A menu appears. Click **Install** on the *loop-and-gate-foundation* plugin. That's it —
 the skills and the memory-loader are now available in every session.
 
 ## Step 4 — place your vault
@@ -80,7 +80,7 @@ markdown; that transparency is the point.
 > **Want the full self-improving loop?** Installed as a plugin, the Foundation's
 > skills sit in a read-only cache, so on some platforms the agent can improve its
 > memory but not rewrite its own skill files. If you want that too, download the repo
-> instead — on the [Foundation repo](https://github.com/slogsdon/second-brain-agent)
+> instead — on the [Foundation repo](https://github.com/slogsdon/loop-and-gate-foundation)
 > click the green **Code** button → **Download ZIP**, open the folder with **File →
 > Open folder**, and run the setup the same way. The plugin is the quickest start;
 > the download is the complete one.
