@@ -28,6 +28,20 @@ the prompt). One-continuous-take feel; scrub boring middles, never the gates.
 Cut a 6s loop (scenes 2→4→8) for X/Reddit autoplay + the 75s full for
 PH/landing/YouTube. Real repo, real change — HN smells staged demos.
 
+Filming preconditions (learned 2026-07-19, see [[claude-code-self-edit-gating]]):
+- **Run the session in `acceptEdits` mode.** In `default` mode Claude Code
+  prompts on every Edit/Write, so scene 3's file changes would each stop for
+  approval — no visible "autonomy where it's cheap," and scene 4's gate stops
+  reading as special. `acceptEdits` lets the routine writes flow silently so the
+  gate is the ONLY pause. This is the shot the whole ad depends on.
+- **The scene-4 gate is the operating skill deciding to stop** (a model-driven
+  pause), not Claude Code's built-in file-write approval prompt. Make it
+  visually distinct from a routine Edit prompt, and don't caption it as
+  harness-enforced — it's the agent pausing on its own judgment, which is the
+  honest and more interesting claim anyway. (A PreToolUse `ask` hook does NOT
+  add enforcement here: default mode already asks, and an `ask` gate can't hold
+  under `--dangerously-skip-permissions` regardless.)
+
 ## Install tutorial outline — "Get gates on your AI agent in 5 minutes"
 
 Product-first, reader's-agent as protagonist, zero LeadSurface. Drives to
