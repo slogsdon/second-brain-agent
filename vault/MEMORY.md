@@ -30,3 +30,4 @@
 - [Loop & Gate — launch strategy](Knowledge/launch-strategy.md) — where/when/how to launch; free-now-paid-later; feedback gate before wide launch; paid-tier menu
 - [Loop & Gate — launch assets](Knowledge/launch-assets.md) — demo shot-list + install-tutorial outline
 - [Loop & Gate — attribution map](Knowledge/launch-attribution.md) — who the launch credits + upstreams; no-vendoring = no license obligation
+- [Claude Code self-edit gating & plugin cache](Knowledge/claude-code-self-edit-gating.md) — why a self-edit gate is redundant in default mode + where plugin skills resolve
