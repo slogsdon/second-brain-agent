@@ -1,5 +1,7 @@
 # loop-and-gate-foundation
 
+[![Listed on ClaudePluginHub](https://www.claudepluginhub.com/badge/slogsdon-loop-and-gate-foundation)](https://www.claudepluginhub.com/plugins/slogsdon-loop-and-gate-foundation?ref=badge)
+
 An AI agent that **remembers** — and gets better at working with you over
 time. Built on [Claude Code](https://claude.com/claude-code) and
 [Obsidian](https://obsidian.md), using nothing but plain markdown files and
@@ -160,6 +162,27 @@ so `improve` still evolves your memory (`MEMORY.md`, reflections) but not the
 skill files themselves. Windows plugin users may also need developer mode for
 the compatibility symlink. Clone for the full self-improving loop; install the
 plugin if you just want to run it everywhere.
+
+## Usage
+
+```bash
+# Start a session — the hook loads memory, CLAUDE.md runs the protocol
+claude
+```
+
+Then talk to it. A few things to try, by name:
+
+```
+"Get to know me: ask about my project and preferences, then save what you learn"
+"Research the best CRM for a 3-person consultancy and write a comparison"
+"Build my voice profile"                              → runs profile-interview
+"Triage my inbox"                                     → sorts vault/Inbox/
+"Run the improve pass: apply the reflections that have earned it"
+```
+
+With no goal, it picks up open items from the last daily note. The full
+walkthroughs are just below — [Your first session](#your-first-session) and
+[Daily use](#daily-use).
 
 ## Your first session
 
