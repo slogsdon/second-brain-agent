@@ -8,6 +8,10 @@ description: Save durable knowledge to the vault. Use when the session produced 
 One job: move facts from this session's context into external memory
 (`vault/Knowledge/`) so future sessions can find them.
 
+> All `vault/…` paths below resolve against the vault base (see CLAUDE.md →
+> "Resolving the vault path"); on a clone that's the repo's `vault/`, on a plugin
+> install it's the setup-recorded path. Resolve the base before writing.
+
 ## What qualifies
 
 - Durable facts: how a system works, a decision and its why, research findings

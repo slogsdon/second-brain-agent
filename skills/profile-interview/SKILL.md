@@ -9,6 +9,10 @@ One job: extract how the user writes and how they judge, into two reference
 documents precise enough that a skill with no memory of them could still write
 in their voice and make a call they'd agree with.
 
+> All `vault/…` paths below resolve against the vault base (see CLAUDE.md →
+> "Resolving the vault path"); on a clone that's the repo's `vault/`, on a plugin
+> install it's the setup-recorded path. Resolve the base before writing.
+
 Two profiles, run as two separate interviews:
 
 - **Voice** → `vault/Profiles/voice-profile.md`. Writing DNA. Consumed by any

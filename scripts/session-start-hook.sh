@@ -7,14 +7,21 @@ set -euo pipefail
 
 cd "$(dirname "$0")/.."
 
-# Resolve the vault: recorded path (set by scripts/setup.sh, works for plugin
-# installs where cwd is not the repo) > repo config.yaml > ./vault.
-VAULT="vault"
-recorded="$HOME/.config/loop-and-gate/vault"
-if [ -f "$recorded" ]; then
-  VAULT="$(cat "$recorded")"
-elif [ -f config.yaml ]; then
-  VAULT="$(grep -E '^vault:' config.yaml | sed 's/^vault:[[:space:]]*//')"
+# Resolve the vault through the shared resolver (scripts/vault-path.sh) so the
+# hook and the skills always agree on ONE base path. It returns the recorded
+# setup path, or a clone's ./vault, and deliberately never the plugin cache's
+# bundled vault — a plugin install must go through setup.
+VAULT="$("$(dirname "$0")/vault-path.sh")"
+
+# First run (especially the plugin path): no vault placed yet. Don't hard-fail
+# on the missing memory files below — point the user at the setup skill and let
+# the session start clean.
+if [ -z "$VAULT" ] || [ ! -f "$VAULT/MEMORY.md" ]; then
+  echo "=== Loop & Gate Foundation: no vault configured yet ==="
+  echo "Run the setup skill once to place your memory vault:"
+  echo "  ask \"set up my vault\", or run /setup"
+  echo "Then start a new session — memory will load here automatically."
+  exit 0
 fi
 
 today=$(date +%Y-%m-%d)

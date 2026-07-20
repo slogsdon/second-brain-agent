@@ -11,6 +11,10 @@ One job: end the session with an honest written record — what happened
 This is the heart of self-improvement. A reflection that never gets written,
 or is written as vague praise, breaks the whole loop.
 
+> All `vault/…` paths below resolve against the vault base (see CLAUDE.md →
+> "Resolving the vault path"); on a clone that's the repo's `vault/`, on a plugin
+> install it's the setup-recorded path. Resolve the base before writing.
+
 ## Steps
 
 1. **Log the session** — append to today's `vault/Daily/YYYY-MM-DD.md` under

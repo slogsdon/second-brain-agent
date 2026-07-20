@@ -61,6 +61,7 @@ procedure. This repo's skills:
 
 | Skill | What it does |
 |-------|--------------|
+| `setup` | First-run only: places and scaffolds your vault (runs the bundled setup script on either the clone or plugin path) and records its location |
 | `session-start` | Loads memory at the start of a session (the index, the latest daily log, the latest reflection) |
 | `capture` | Saves a durable fact to the Knowledge folder and indexes it |
 | `inbox-triage` | Clears `vault/Inbox/` — the raw thoughts you dumped from your phone — sorting each into a fact, an idea, a task, or noise, with your confirmation |
@@ -152,8 +153,11 @@ agent's brain grow.
 /plugin marketplace add slogsdon/loop-and-gate-foundation
 ```
 
-Enable it, run `scripts/setup.sh` once to place your vault, then start any
-session — the SessionStart hook and all seven skills load globally.
+Enable it, then run the **`setup` skill** once to place your vault — just ask
+*"set up my vault"* (or `/setup`). Unlike the clone path, you have no
+`scripts/setup.sh` in your working directory here; the script ships in the
+plugin cache, and the skill finds and runs it for you. Then start any session —
+the SessionStart hook and all eight skills load globally.
 
 **One limitation, by platform.** The `improve` skill rewrites its own skills as
 it learns. That self-editing only persists in a **clone**, where the skills are

@@ -28,6 +28,17 @@ For multi-step goals, use the `loop` skill: you orchestrate and verify,
 subagents do the work — one iteration each, fresh context every time.
 Small single-step goals don't need it. Just work them directly.
 
+## Resolving the vault path
+
+The vault is not always the repo's `vault/` folder — on a plugin install it
+lives outside the read-only plugin cache. There is one source of truth for its
+absolute location: the SessionStart hook prints it in the injected header
+(`--- <base>/MEMORY.md ---`), and `scripts/vault-path.sh` (or
+`cat ~/.config/loop-and-gate/vault`) returns the same base. **Everywhere a skill
+or this file writes `vault/…`, read it as `<base>/…`** using that resolved base.
+On a clone the base is the repo's own `vault/`, so the paths read literally. If
+no base resolves, the vault isn't set up — run the `setup` skill.
+
 ## Memory map
 
 - `vault/MEMORY.md` — the index. Always loaded, kept under ~40 lines.
