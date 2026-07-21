@@ -52,8 +52,10 @@ script.
    ```
 
 4. Report where the vault landed (the script prints and records the path) and
-   the single next step: start a session, or run `profile-interview` to teach it
-   your voice.
+   the next steps: start a session, run `profile-interview` to teach it your
+   voice, or run `add-kits` to add the rest of the Loop & Gate stack (the Build,
+   Grow, and Accountability kits). Offer `add-kits` here but don't run it inline —
+   it's a separate gated skill, and vault setup is done.
 
 ## Rules
 

@@ -86,6 +86,19 @@ markdown; that transparency is the point.
 > Open folder**, and run the setup the same way. The plugin is the quickest start;
 > the download is the complete one.
 
+## Step 6 — add the rest of the stack (optional)
+
+Foundation is the base. Three more kits build on it — **Build** (ship software),
+**Grow** (take it to market), and **Accountability** (your own follow-through).
+When you want them, just say:
+
+> Add the rest of the stack.
+
+That runs the **add-kits** skill. It lists the kits, you tick the ones you want,
+and for each it also *offers* the free helper tools that kit uses — you can skip
+those and use your own. Nothing installs unless you pick it, and you can run it
+again anytime to add more. There's no rush; come back to this when you're ready.
+
 ## Capturing on the go — power move
 
 Install the **Obsidian** mobile app on your phone and tablet, pointed at the same

@@ -69,6 +69,7 @@ procedure. This repo's skills:
 | `reflect` | Ends a session: logs what happened + writes a self-review with one lesson |
 | `improve` | Applies lessons that have come up repeatedly — by editing the skill files themselves |
 | `loop` | For bigger goals: your session becomes the orchestrator — it breaks the goal into tasks and dispatches a fresh subagent per iteration, verifying each result before it's committed |
+| `add-kits` | Offers to install the rest of the stack — the Build, Grow, and Accountability kits and each one's swappable pipeline — every piece a gated, declinable choice |
 
 **The loop** ties it together: one interactive Claude Code session = one
 iteration. Open Claude Code in this folder and the SessionStart hook loads
@@ -160,7 +161,7 @@ Enable it, then run the **`setup` skill** once to place your vault — just ask
 *"set up my vault"* (or `/setup`). Unlike the clone path, you have no
 `scripts/setup.sh` in your working directory here; the script ships in the
 plugin cache, and the skill finds and runs it for you. Then start any session —
-the SessionStart hook and all eight skills load globally.
+the SessionStart hook and all nine skills load globally.
 
 **One limitation, by platform.** The `improve` skill rewrites its own skills as
 it learns. That self-editing only persists in a **clone**, where the skills are
@@ -184,6 +185,7 @@ Then talk to it. A few things to try, by name:
 "Research the best CRM for a 3-person consultancy and write a comparison"
 "Build my voice profile"                              → runs profile-interview
 "Triage my inbox"                                     → sorts vault/Inbox/
+"Add the rest of the stack"                           → runs add-kits
 "Run the improve pass: apply the reflections that have earned it"
 ```
 
@@ -332,6 +334,18 @@ good work. It writes two reference docs into `vault/Profiles/`: a voice profile
 (so anything it drafts can sound like you) and a taste profile (so it has a
 standard to point at when it has to make a call you'd normally make yourself).
 Re-run it anytime to sharpen either one. It merges rather than overwrites.
+
+## Add the rest of the stack
+
+Foundation is the ground floor. On top of it sit three more kits — **Build**
+(ship software through judgment gates), **Grow** (take it to market), and
+**Accountability** (your own follow-through) — all in the same marketplace you
+already added. Run **add-kits** ("add the rest of the stack" or `/add-kits`) and
+it offers each one, then offers each kit's build/grow pipeline separately. Every
+piece is a gated, declinable choice: the kits are optional and the pipelines are
+swappable, so if you bring your own tools you just say no and keep your setup.
+It's safe to re-run — it skips whatever you've already installed — so you can add
+one kit now and the rest whenever.
 
 ## The self-improvement part
 
